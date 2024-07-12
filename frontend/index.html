@@ -102,6 +102,23 @@
       document
         .querySelector("#manifestPlaceholder")
         .setAttribute("href", manifestURL);
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Get the theme parameter from the URL
+        var theme = getUrlParameter('theme');
+
+        // Set the theme as a class on the body tag
+        if (theme) {
+            document.documentElement.classList.add(theme );
+        }
+
+
     </script>
 
     <style>
