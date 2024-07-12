@@ -3,7 +3,6 @@
     <div v-if="uploadStore.getProgress" class="progress">
       <div v-bind:style="{ width: uploadStore.getProgress + '%' }"></div>
     </div>
-    <sidebar></sidebar>
     <main>
       <router-view></router-view>
       <shell

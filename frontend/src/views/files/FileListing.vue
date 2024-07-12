@@ -1,14 +1,8 @@
 <template>
   <div>
-    <header-bar showMenu showLogo>
-      <search />
+    <header-bar showMenu >
       <title />
-      <action
-        class="search-button"
-        icon="search"
-        :label="t('buttons.search')"
-        @action="openSearch()"
-      />
+     
 
       <template #actions>
         <template v-if="!isMobile">
