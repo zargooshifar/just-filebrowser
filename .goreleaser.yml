@@ -1,5 +1,5 @@
 project_name: filebrowser
-
+version: 2
 env:
   - GO111MODULE=on
 
@@ -11,16 +11,10 @@ builds:
     main: main.go
     binary: filebrowser
     goos:
-      - darwin
       - linux
-      - windows
-      - freebsd
     goarch:
       - amd64
-      - 386
-      - arm
       - arm64
-      - riscv64
     goarm:
       - 5
       - 6
