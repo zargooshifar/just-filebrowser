@@ -18,5 +18,5 @@ builds:
 
 archives:
   -
-    name_template: "{{.Os}}-{{.Arch}}-{{ .ProjectName }}"
-    format: tar.gz
+    name_template: "{{ .ProjectName }}-{{.Arch}}"
+    format: binary
